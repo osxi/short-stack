@@ -1,0 +1,8 @@
+- shell: ioreg -n IOHIDKeyboard -r | grep -E 'VendorID\"|ProductID' | awk '{ print $4 }' | paste -s -d'-\n' -
+  register: keyboard_ids
+- shell: "echo {{keyboard_ids.stdout}} | xargs -I{} sh -c \"defaults -currentHost read -g 'com.apple.keyboard.modifiermapping.{}-0' 2> /dev/null | grep 'Dst = 2'\""
+  register: check_result
+  ignore_errors: yes
+- name: capslock_to_control
+  shell: "echo {{keyboard_ids.stdout}} | xargs -I{} sh -c \"defaults -currentHost write -g 'com.apple.keyboard.modifiermapping.{}-0' -array '<dict><key>HIDKeyboardModifierMappingDst</key><integer>2</integer><key>HIDKeyboardModifierMappingSrc</key><integer>0</integer></dict>'\""
+  when: check_result.stdout.strip() == ''

@@ -1,0 +1,6 @@
+- shell: ls -Ol ${HOME} | grep Library | grep hidden || true
+  register: hidden_check
+  ignore_errors: yes
+- name: unhide_library
+  command: chflags nohidden ${HOME}/Library
+  when: hidden_check.stdout.strip() != ''

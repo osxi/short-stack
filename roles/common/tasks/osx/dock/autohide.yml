@@ -1,0 +1,2 @@
+- name: autohide dock
+  shell: defaults -currentHost write com.apple.dock autohide -boolean true

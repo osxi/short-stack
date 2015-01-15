@@ -5,3 +5,4 @@
 - include: ruby.yml
 - include: tmux.yml
 - include: javascript.yml
+- include: osx.yml

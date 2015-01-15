@@ -1,0 +1,4 @@
+- include: show_hard_drives_on_desktop.yml
+- include: show_external_hard_drives_on_desktop.yml
+- include: show_mounted_servers_on_desktop.yml
+- include: show_removable_media_on_desktop.yml

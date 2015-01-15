@@ -1,0 +1,4 @@
+- include: finder/show_all_on_desktop.yml
+- include: finder/empty_trash_securely.yml
+- include: finder/unhide_library.yml
+- include: finder/restart_finder.yml

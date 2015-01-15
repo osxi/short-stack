@@ -1,0 +1,7 @@
+- include: osx/global.yml
+- include: osx/dock.yml
+- include: osx/finder.yml
+- include: osx/universal_access.yml
+- include: osx/disable_app_quarantine.yml
+- include: osx/no_network_dsstores.yml
+- include: osx/keyboard.yml

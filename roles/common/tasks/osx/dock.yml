@@ -1,0 +1,2 @@
+- include: dock/autohide.yml
+- include: dock/restart_dock.yml

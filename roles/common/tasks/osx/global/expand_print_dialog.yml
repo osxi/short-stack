@@ -1,0 +1,2 @@
+- name: expand_print_dialog
+  shell: defaults -currentHost write -g PMPrintingExpandedStateForPrint -boolean true

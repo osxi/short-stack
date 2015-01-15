@@ -1,0 +1,2 @@
+- name: expand_save_dialog
+  shell: defaults -currentHost write -g NSNavPanelExpandedStateForSaveMode -boolean true

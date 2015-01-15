@@ -1,0 +1,2 @@
+- name: disable_key_press_and_hold
+  command: defaults -currentHost write -g ApplePressAndHoldEnabled -boolean false

@@ -1,0 +1,2 @@
+- include: universal_access/ctrl_mod_zoom.yml
+- include: universal_access/enable_scrollwheel_zoom.yml

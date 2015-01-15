@@ -1,0 +1,2 @@
+- name: show_external_hard_drives_on_desktop
+  shell: defaults -currentHost write com.apple.finder ShowExternalHardDrivesOnDesktop -boolean true
